@@ -1,0 +1,8 @@
+﻿CREATE TABLE [Stg].[Extracts]
+(
+	[ExtractId] INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_Stg_Extracts PRIMARY KEY,
+	[ExtractType] NVARCHAR(30) NOT NULL,
+	[StartTime] DATETIME2 NOT NULL,
+	[EndTime] DATETIME2 NULL,
+	[ExtractStatus] NVARCHAR(30) NOT NULL
+)

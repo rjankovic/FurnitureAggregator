@@ -1,0 +1,11 @@
+﻿CREATE TABLE [Stg].[ExtractItems]
+(
+	[ExtractItemId] INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_Stg_ExtractItems PRIMARY KEY,
+	[Url] NVARCHAR(MAX) NOT NULL,
+	[OriginUrl] NVARCHAR(MAX) NOT NULL,
+	[PageType] NVARCHAR(MAX) NOT NULL,
+	[ItemPath] NVARCHAR(MAX) NOT NULL,
+	[ItemName] NVARCHAR(MAX) NOT NULL,
+	[ExtractId] INT NOT NULL CONSTRAINT FK_Stg_ExtractItems_ExtractId FOREIGN KEY REFERENCES Stg.Extracts(ExtractId),
+	[Content] NVARCHAR(MAX) NOT NULL,
+)
